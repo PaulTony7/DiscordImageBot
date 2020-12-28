@@ -1,5 +1,5 @@
 import discord
-
+import sys
 client = discord.Client()
 
 @client.event
@@ -14,4 +14,4 @@ async def on_message(message):
     if message.content.startswith('!paly'):
         await message.channel.send('Słocki zjebałeś!')
 
-client.run('NzkzMDY4NTY5NzU0ODYxNTY4.X-m4qQ.Aq_3fSRnlSIok9MU5sUyTNIsS38')
+client.run(sys.argv[1])
